@@ -1,56 +1,57 @@
-2018-07-10T07:22:01.610Z - normal: Load ~/.CocosCreator/settings.json
-2018-07-10T07:22:01.610Z - normal: checking language setting...
-2018-07-10T07:22:01.610Z - normal: Language: zh
-2018-07-10T07:22:10.459Z - success: protocol editor-framework registered
-2018-07-10T07:22:10.459Z - success: protocol app registered
-2018-07-10T07:22:10.459Z - success: protocol theme registered
-2018-07-10T07:22:10.459Z - success: protocol packages registered
-2018-07-10T07:22:10.459Z - success: protocol unpack registerred
-2018-07-10T07:22:10.459Z - success: protocol disable-commonjs registerred
-2018-07-10T07:22:11.470Z - normal: connected!
-2018-07-10T07:22:11.470Z - normal: Check project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne
-2018-07-10T07:22:11.480Z - normal: Initializing Cocos2d
-2018-07-10T07:22:13.972Z - normal: Initializing Asset Database
-2018-07-10T07:22:14.262Z - success: protocol uuid registerred
-2018-07-10T07:22:14.262Z - success: protocol db registerred
-2018-07-10T07:22:14.262Z - success: protocol thumbnail registerred
-2018-07-10T07:22:14.262Z - normal: Loading editor/builtin packages
-2018-07-10T07:22:14.562Z - success: anysdk loaded
-2018-07-10T07:22:14.903Z - success: assets loaded
-2018-07-10T07:22:14.903Z - success: builder loaded
-2018-07-10T07:22:14.913Z - success: cocos-analytics loaded
-2018-07-10T07:22:14.933Z - success: console loaded
-2018-07-10T07:22:15.073Z - success: fb-instant-games loaded
-2018-07-10T07:22:15.083Z - success: hierarchy loaded
-2018-07-10T07:22:15.093Z - success: inspector loaded
-2018-07-10T07:22:15.093Z - success: keystore loaded
-2018-07-10T07:22:15.093Z - success: node-library loaded
-2018-07-10T07:22:15.123Z - success: package-asset loaded
-2018-07-10T07:22:15.123Z - success: preferences loaded
-2018-07-10T07:22:15.123Z - success: project-exporter loaded
-2018-07-10T07:22:15.152Z - success: project-importer loaded
-2018-07-10T07:22:15.152Z - success: project-settings loaded
-2018-07-10T07:22:15.183Z - success: ui-kit loaded
-2018-07-10T07:22:15.233Z - success: ui-grid loaded
-2018-07-10T07:22:15.273Z - success: scene loaded
-2018-07-10T07:22:15.273Z - success: sprite-editor loaded
-2018-07-10T07:22:15.293Z - success: store loaded
-2018-07-10T07:22:15.313Z - success: timeline loaded
-2018-07-10T07:22:15.313Z - normal: Loading builtin packages
-2018-07-10T07:22:15.393Z - success: asset-db-debugger loaded
-2018-07-10T07:22:15.423Z - success: code-editor loaded
-2018-07-10T07:22:15.433Z - success: color-picker loaded
-2018-07-10T07:22:15.444Z - success: package-manager loaded
-2018-07-10T07:22:15.452Z - success: qqplay-adapter loaded
-2018-07-10T07:22:15.563Z - success: sdkbox loaded
-2018-07-10T07:22:15.623Z - success: tester loaded
-2018-07-10T07:22:15.633Z - success: ui-kit-preview-extra loaded
-2018-07-10T07:22:15.653Z - success: ui-kit-preview loaded
-2018-07-10T07:22:15.663Z - success: ui-tree loaded
-2018-07-10T07:22:15.663Z - success: weapp-adapter loaded
-2018-07-10T07:22:19.886Z - normal: Initializing project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne
-2018-07-10T07:22:19.896Z - normal: Loading packages
-2018-07-10T07:22:19.906Z - normal: Watching packages
-2018-07-10T07:22:20.727Z - normal: Run Application
-2018-07-10T07:22:24.113Z - success: preview server running at http://localhost:7456
-2018-07-10T07:22:44.098Z - normal: 1.9.2
+2018-07-10T07:51:24.650Z - normal: Load ~/.CocosCreator/settings.json
+2018-07-10T07:51:24.656Z - normal: checking language setting...
+2018-07-10T07:51:24.657Z - normal: Language: zh
+2018-07-10T07:51:27.571Z - success: protocol editor-framework registered
+2018-07-10T07:51:27.572Z - success: protocol app registered
+2018-07-10T07:51:27.572Z - success: protocol theme registered
+2018-07-10T07:51:27.572Z - success: protocol packages registered
+2018-07-10T07:51:27.572Z - success: protocol unpack registerred
+2018-07-10T07:51:27.572Z - success: protocol disable-commonjs registerred
+2018-07-10T07:51:27.818Z - normal: connected!
+2018-07-10T07:51:27.821Z - normal: Check project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne
+2018-07-10T07:51:27.825Z - normal: Initializing Cocos2d
+2018-07-10T07:51:28.233Z - normal: Initializing Asset Database
+2018-07-10T07:51:28.293Z - success: protocol uuid registerred
+2018-07-10T07:51:28.293Z - success: protocol db registerred
+2018-07-10T07:51:28.293Z - success: protocol thumbnail registerred
+2018-07-10T07:51:28.294Z - normal: Loading editor/builtin packages
+2018-07-10T07:51:28.326Z - success: anysdk loaded
+2018-07-10T07:51:28.577Z - success: assets loaded
+2018-07-10T07:51:28.580Z - success: builder loaded
+2018-07-10T07:51:28.584Z - success: cocos-analytics loaded
+2018-07-10T07:51:28.588Z - success: console loaded
+2018-07-10T07:51:28.637Z - success: fb-instant-games loaded
+2018-07-10T07:51:28.641Z - success: hierarchy loaded
+2018-07-10T07:51:28.645Z - success: inspector loaded
+2018-07-10T07:51:28.647Z - success: keystore loaded
+2018-07-10T07:51:28.651Z - success: node-library loaded
+2018-07-10T07:51:28.654Z - success: package-asset loaded
+2018-07-10T07:51:28.657Z - success: preferences loaded
+2018-07-10T07:51:28.659Z - success: project-exporter loaded
+2018-07-10T07:51:28.682Z - success: project-importer loaded
+2018-07-10T07:51:28.685Z - success: project-settings loaded
+2018-07-10T07:51:28.690Z - success: ui-kit loaded
+2018-07-10T07:51:28.693Z - success: ui-grid loaded
+2018-07-10T07:51:28.698Z - success: scene loaded
+2018-07-10T07:51:28.700Z - success: sprite-editor loaded
+2018-07-10T07:51:28.704Z - success: store loaded
+2018-07-10T07:51:28.710Z - success: timeline loaded
+2018-07-10T07:51:28.711Z - normal: Loading builtin packages
+2018-07-10T07:51:28.715Z - success: asset-db-debugger loaded
+2018-07-10T07:51:28.717Z - success: code-editor loaded
+2018-07-10T07:51:28.718Z - success: color-picker loaded
+2018-07-10T07:51:28.722Z - success: package-manager loaded
+2018-07-10T07:51:28.725Z - success: qqplay-adapter loaded
+2018-07-10T07:51:28.730Z - success: sdkbox loaded
+2018-07-10T07:51:28.734Z - success: tester loaded
+2018-07-10T07:51:28.740Z - success: ui-kit-preview-extra loaded
+2018-07-10T07:51:28.745Z - success: ui-kit-preview loaded
+2018-07-10T07:51:28.749Z - success: ui-tree loaded
+2018-07-10T07:51:28.753Z - success: weapp-adapter loaded
+2018-07-10T07:51:31.456Z - normal: Initializing project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne
+2018-07-10T07:51:31.460Z - normal: Loading packages
+2018-07-10T07:51:31.469Z - normal: Watching packages
+2018-07-10T07:51:31.965Z - normal: Run Application
+2018-07-10T07:51:32.291Z - warn: [db-task][init] Backup unused meta file: db://assets/Scene.meta
+2018-07-10T07:51:45.141Z - success: preview server running at http://localhost:7456
+2018-07-10T07:51:53.743Z - normal: 1.9.2
