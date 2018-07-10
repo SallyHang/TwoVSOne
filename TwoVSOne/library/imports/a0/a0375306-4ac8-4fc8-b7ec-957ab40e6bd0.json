@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "blackchess",
+    "texture": "4ee288e8-f959-48a2-9cfc-4ddaa0856aee",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      120,
+      120
+    ],
+    "offset": [
+      -1.5,
+      0
+    ],
+    "originalSize": [
+      123,
+      120
+    ]
+  }
+}
