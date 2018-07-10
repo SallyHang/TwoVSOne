@@ -65,8 +65,8 @@
     "relativePath": "Texture\\whitechess.png"
   },
   "217e34ee-9757-49c0-904a-961db197cdc8": {
-    "asset": 1531208789926,
-    "meta": 1531209103743,
+    "asset": 1531209806761,
+    "meta": 1531209806821,
     "relativePath": "chess.prefab"
   },
   "82057ad2-1d3e-475f-8c33-742c22e21792": {
@@ -265,23 +265,18 @@
     "relativePath": "prefab\\webview.prefab"
   },
   "da0d0447-143d-43ca-a7ab-13c2e35c733f": {
-    "asset": 1531208789928,
-    "meta": 1531209103746,
+    "asset": 1531209810565,
+    "meta": 1531209810595,
     "relativePath": "game.fire"
-  },
-  "d7467001-47fe-43c1-a593-3250d55a87f8": {
-    "asset": 1531208789912,
-    "meta": 1531209104642,
-    "relativePath": "Script\\chess.js"
-  },
-  "2b6195e0-2379-4bab-9c83-15141d18dde5": {
-    "asset": 1531208789914,
-    "meta": 1531209104649,
-    "relativePath": "Script\\click.js"
   },
   "3b08dff5-6166-4d49-8f3b-d24e73f55a7c": {
     "asset": 1531208789933,
     "meta": 1531209104707,
     "relativePath": "whitechess.prefab"
+  },
+  "2b6195e0-2379-4bab-9c83-15141d18dde5": {
+    "asset": 1531209700641,
+    "meta": 1531209742803,
+    "relativePath": "Script\\click.js"
   }
 }
