@@ -265,8 +265,8 @@
     "relativePath": "prefab\\webview.prefab"
   },
   "da0d0447-143d-43ca-a7ab-13c2e35c733f": {
-    "asset": 1531209810565,
-    "meta": 1531209810595,
+    "asset": 1531211146172,
+    "meta": 1531211146212,
     "relativePath": "game.fire"
   },
   "3b08dff5-6166-4d49-8f3b-d24e73f55a7c": {
@@ -278,5 +278,15 @@
     "asset": 1531209700641,
     "meta": 1531209742803,
     "relativePath": "Script\\click.js"
+  },
+  "62d9febd-8a24-4790-83e1-5cb6185b71d2": {
+    "asset": 1531208789923,
+    "meta": 1531211906664,
+    "relativePath": "resources\\whitechess.png"
+  },
+  "d980d2f7-9cd1-43be-a047-367fe3ee97e0": {
+    "asset": 1531213239342,
+    "meta": 1531213243324,
+    "relativePath": "Script\\chessinit.js"
   }
 }

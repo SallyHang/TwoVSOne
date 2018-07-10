@@ -185,7 +185,7 @@
     "_atlas": null
   },
   {
-    "__type__": "2b619XgI3lLq5yDFRQdGN3l",
+    "__type__": "d980dL3nNFDvqBHNn/j7pfg",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -195,7 +195,9 @@
     "chessPrefab": {
       "__uuid__": "217e34ee-9757-49c0-904a-961db197cdc8"
     },
-    "whitechessPrefab": null,
+    "whitechessPrefab": {
+      "__uuid__": "3b08dff5-6166-4d49-8f3b-d24e73f55a7c"
+    },
     "touchChess": null
   },
   {
