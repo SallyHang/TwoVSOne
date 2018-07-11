@@ -40,7 +40,7 @@
     "relativePath": "prefab"
   },
   "0bc21336-8c21-4fe4-94bc-76672e057393": {
-    "asset": 1531208789914,
+    "asset": 1531211059210,
     "meta": 1531208789911,
     "relativePath": "Script"
   },
@@ -65,12 +65,12 @@
     "relativePath": "Texture\\whitechess.png"
   },
   "217e34ee-9757-49c0-904a-961db197cdc8": {
-    "asset": 1531209806761,
-    "meta": 1531209806821,
+    "asset": 1531277513170,
+    "meta": 1531277513201,
     "relativePath": "chess.prefab"
   },
   "82057ad2-1d3e-475f-8c33-742c22e21792": {
-    "asset": 1531208789932,
+    "asset": 1531211906566,
     "meta": 1531208789930,
     "relativePath": "resources"
   },
@@ -265,8 +265,8 @@
     "relativePath": "prefab\\webview.prefab"
   },
   "da0d0447-143d-43ca-a7ab-13c2e35c733f": {
-    "asset": 1531211146172,
-    "meta": 1531211146212,
+    "asset": 1531277212633,
+    "meta": 1531277212683,
     "relativePath": "game.fire"
   },
   "3b08dff5-6166-4d49-8f3b-d24e73f55a7c": {
@@ -284,9 +284,34 @@
     "meta": 1531211906664,
     "relativePath": "resources\\whitechess.png"
   },
+  "50e9f44f-55c0-4ead-91d6-1a5aed5c7612": {
+    "asset": 1531276819848,
+    "meta": 1531276819859,
+    "relativePath": "biggerwhite.prefab"
+  },
+  "824289b9-39c6-4c20-bc38-ab13ebe99161": {
+    "asset": 1531276808448,
+    "meta": 1531276808480,
+    "relativePath": "biggerblack.prefab"
+  },
+  "a51f508f-21fa-4a5a-8d9d-44f148868101": {
+    "asset": 1531278782960,
+    "meta": 1531278839225,
+    "relativePath": "resources\\clickblack.png"
+  },
+  "a7071f5a-bf71-4f46-ad71-87f0ba140a78": {
+    "asset": 1531278819017,
+    "meta": 1531278839228,
+    "relativePath": "resources\\clickwhite.png"
+  },
+  "5f4008d6-6a38-4890-b058-7fd5a54c816b": {
+    "asset": 1531279492984,
+    "meta": 1531279493077,
+    "relativePath": "Script\\NewScript.js"
+  },
   "d980d2f7-9cd1-43be-a047-367fe3ee97e0": {
-    "asset": 1531213239342,
-    "meta": 1531213243324,
+    "asset": 1531297119147,
+    "meta": 1531297320196,
     "relativePath": "Script\\chessinit.js"
   }
 }

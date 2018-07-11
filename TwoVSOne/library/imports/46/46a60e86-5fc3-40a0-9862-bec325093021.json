@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "clickwhite",
+    "texture": "a7071f5a-bf71-4f46-ad71-87f0ba140a78",
+    "atlas": "",
+    "rect": [
+      4,
+      3,
+      119,
+      119
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      126,
+      125
+    ]
+  }
+}

@@ -1,57 +1,74 @@
-2018-07-10T07:51:24.650Z - normal: Load ~/.CocosCreator/settings.json
-2018-07-10T07:51:24.656Z - normal: checking language setting...
-2018-07-10T07:51:24.657Z - normal: Language: zh
-2018-07-10T07:51:27.571Z - success: protocol editor-framework registered
-2018-07-10T07:51:27.572Z - success: protocol app registered
-2018-07-10T07:51:27.572Z - success: protocol theme registered
-2018-07-10T07:51:27.572Z - success: protocol packages registered
-2018-07-10T07:51:27.572Z - success: protocol unpack registerred
-2018-07-10T07:51:27.572Z - success: protocol disable-commonjs registerred
-2018-07-10T07:51:27.818Z - normal: connected!
-2018-07-10T07:51:27.821Z - normal: Check project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne
-2018-07-10T07:51:27.825Z - normal: Initializing Cocos2d
-2018-07-10T07:51:28.233Z - normal: Initializing Asset Database
-2018-07-10T07:51:28.293Z - success: protocol uuid registerred
-2018-07-10T07:51:28.293Z - success: protocol db registerred
-2018-07-10T07:51:28.293Z - success: protocol thumbnail registerred
-2018-07-10T07:51:28.294Z - normal: Loading editor/builtin packages
-2018-07-10T07:51:28.326Z - success: anysdk loaded
-2018-07-10T07:51:28.577Z - success: assets loaded
-2018-07-10T07:51:28.580Z - success: builder loaded
-2018-07-10T07:51:28.584Z - success: cocos-analytics loaded
-2018-07-10T07:51:28.588Z - success: console loaded
-2018-07-10T07:51:28.637Z - success: fb-instant-games loaded
-2018-07-10T07:51:28.641Z - success: hierarchy loaded
-2018-07-10T07:51:28.645Z - success: inspector loaded
-2018-07-10T07:51:28.647Z - success: keystore loaded
-2018-07-10T07:51:28.651Z - success: node-library loaded
-2018-07-10T07:51:28.654Z - success: package-asset loaded
-2018-07-10T07:51:28.657Z - success: preferences loaded
-2018-07-10T07:51:28.659Z - success: project-exporter loaded
-2018-07-10T07:51:28.682Z - success: project-importer loaded
-2018-07-10T07:51:28.685Z - success: project-settings loaded
-2018-07-10T07:51:28.690Z - success: ui-kit loaded
-2018-07-10T07:51:28.693Z - success: ui-grid loaded
-2018-07-10T07:51:28.698Z - success: scene loaded
-2018-07-10T07:51:28.700Z - success: sprite-editor loaded
-2018-07-10T07:51:28.704Z - success: store loaded
-2018-07-10T07:51:28.710Z - success: timeline loaded
-2018-07-10T07:51:28.711Z - normal: Loading builtin packages
-2018-07-10T07:51:28.715Z - success: asset-db-debugger loaded
-2018-07-10T07:51:28.717Z - success: code-editor loaded
-2018-07-10T07:51:28.718Z - success: color-picker loaded
-2018-07-10T07:51:28.722Z - success: package-manager loaded
-2018-07-10T07:51:28.725Z - success: qqplay-adapter loaded
-2018-07-10T07:51:28.730Z - success: sdkbox loaded
-2018-07-10T07:51:28.734Z - success: tester loaded
-2018-07-10T07:51:28.740Z - success: ui-kit-preview-extra loaded
-2018-07-10T07:51:28.745Z - success: ui-kit-preview loaded
-2018-07-10T07:51:28.749Z - success: ui-tree loaded
-2018-07-10T07:51:28.753Z - success: weapp-adapter loaded
-2018-07-10T07:51:31.456Z - normal: Initializing project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne
-2018-07-10T07:51:31.460Z - normal: Loading packages
-2018-07-10T07:51:31.469Z - normal: Watching packages
-2018-07-10T07:51:31.965Z - normal: Run Application
-2018-07-10T07:51:32.291Z - warn: [db-task][init] Backup unused meta file: db://assets/Scene.meta
-2018-07-10T07:51:45.141Z - success: preview server running at http://localhost:7456
-2018-07-10T07:51:53.743Z - normal: 1.9.2
+2018-07-11T02:33:14.969Z - normal: Load ~/.CocosCreator/settings.json
+2018-07-11T02:33:14.969Z - normal: checking language setting...
+2018-07-11T02:33:14.969Z - normal: Language: zh
+2018-07-11T02:33:21.124Z - success: protocol editor-framework registered
+2018-07-11T02:33:21.124Z - success: protocol app registered
+2018-07-11T02:33:21.124Z - success: protocol theme registered
+2018-07-11T02:33:21.124Z - success: protocol packages registered
+2018-07-11T02:33:21.124Z - success: protocol unpack registerred
+2018-07-11T02:33:21.124Z - success: protocol disable-commonjs registerred
+2018-07-11T02:33:21.324Z - normal: connected!
+2018-07-11T02:33:21.334Z - normal: Check project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne
+2018-07-11T02:33:21.334Z - normal: Initializing Cocos2d
+2018-07-11T02:33:23.466Z - normal: Initializing Asset Database
+2018-07-11T02:33:23.647Z - success: protocol uuid registerred
+2018-07-11T02:33:23.647Z - success: protocol db registerred
+2018-07-11T02:33:23.647Z - success: protocol thumbnail registerred
+2018-07-11T02:33:23.647Z - normal: Loading editor/builtin packages
+2018-07-11T02:33:23.756Z - success: anysdk loaded
+2018-07-11T02:33:24.116Z - success: assets loaded
+2018-07-11T02:33:24.116Z - success: builder loaded
+2018-07-11T02:33:24.126Z - success: cocos-analytics loaded
+2018-07-11T02:33:24.136Z - success: console loaded
+2018-07-11T02:33:24.204Z - success: fb-instant-games loaded
+2018-07-11T02:33:24.207Z - success: hierarchy loaded
+2018-07-11T02:33:24.207Z - success: inspector loaded
+2018-07-11T02:33:24.217Z - success: keystore loaded
+2018-07-11T02:33:24.217Z - success: node-library loaded
+2018-07-11T02:33:24.217Z - success: package-asset loaded
+2018-07-11T02:33:24.247Z - success: preferences loaded
+2018-07-11T02:33:24.247Z - success: project-exporter loaded
+2018-07-11T02:33:24.267Z - success: project-importer loaded
+2018-07-11T02:33:24.277Z - success: project-settings loaded
+2018-07-11T02:33:24.277Z - success: ui-kit loaded
+2018-07-11T02:33:24.306Z - success: ui-grid loaded
+2018-07-11T02:33:24.317Z - success: scene loaded
+2018-07-11T02:33:24.317Z - success: sprite-editor loaded
+2018-07-11T02:33:24.317Z - success: store loaded
+2018-07-11T02:33:24.327Z - success: timeline loaded
+2018-07-11T02:33:24.327Z - normal: Loading builtin packages
+2018-07-11T02:33:24.404Z - success: asset-db-debugger loaded
+2018-07-11T02:33:24.417Z - success: code-editor loaded
+2018-07-11T02:33:24.417Z - success: color-picker loaded
+2018-07-11T02:33:24.427Z - success: package-manager loaded
+2018-07-11T02:33:24.437Z - success: qqplay-adapter loaded
+2018-07-11T02:33:24.487Z - success: sdkbox loaded
+2018-07-11T02:33:24.537Z - success: tester loaded
+2018-07-11T02:33:24.537Z - success: ui-kit-preview-extra loaded
+2018-07-11T02:33:24.547Z - success: ui-kit-preview loaded
+2018-07-11T02:33:24.557Z - success: ui-tree loaded
+2018-07-11T02:33:24.557Z - success: weapp-adapter loaded
+2018-07-11T02:33:27.619Z - normal: Initializing project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne
+2018-07-11T02:33:27.629Z - normal: Loading packages
+2018-07-11T02:33:27.649Z - normal: Watching packages
+2018-07-11T02:33:28.404Z - normal: Run Application
+2018-07-11T02:33:30.844Z - success: preview server running at http://localhost:7456
+2018-07-11T02:33:51.862Z - normal: 1.9.2
+2018-07-11T03:24:47.779Z - failed: [db-task][sync-changes] Failed to import asset D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne\assets\Script\chessinit.js, message: Compile error: SyntaxError: D:/ProgramFiles/CocosCreateEngine/code/TwoVSOne/TwoVSOne/TwoVSOne/assets/Script/chessinit.js: var is a reserved word (15:4)
+  13 |     },
+  14 |     //返回点击的棋子节点
+> 15 |     var selectchess = function(event){
+     |     ^
+  16 |         var newNode = cc.instantiate(this.chessPrefab);//复制Chess预制资源
+  17 |         this.node.addChild(newNode);
+  18 |         newNode.setPosition(cc.p(x*(this.node.width/4),y*(this.node.height/4)));//根据棋盘和棋子大小计算使每个棋子节点位于指定位置
+    at Parser.pp$5.raise (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp$3.checkReservedWord (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4347:10)
+    at Parser.pp$3.parseObjectProperty (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4121:10)
+    at Parser.pp$3.parseObjPropValue (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4140:84)
+    at Parser.pp$3.parseObj (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4048:10)
+    at Parser.pp$3.parseExprAtom (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3719:19)
+    at Parser.pp$3.parseExprSubscripts (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
