@@ -12,9 +12,22 @@ var Game = cc.Class({
             default: null,
             type: cc.Prefab
         },
+        chess: { //棋子节点
+            default: null,
+            type: cc.Node
+        },
         whitechessPrefab: { //棋子的预制资源
             default: null,
             type: cc.Prefab
+        },
+        gameState: { // 游戏顺序
+            default: 'white'
+        },
+        lastNode: { // 上一步棋子位置
+            default: 0
+        },
+        prepare: { // 是否是准备走棋子 0：否 1：是
+            default: 0
         }
     },
     //返回点击的棋子节点
@@ -44,27 +57,61 @@ var Game = cc.Class({
         for (var y = 0; y < 5; y++) {
             for (var x = 0; x < 5; x++) {
                 var newNode = cc.instantiate(this.chessPrefab); //复制Chess预制资源
+                //为了调用类里面的静态方法，需要将类实例化
+                var game = new Game();
                 this.node.addChild(newNode);
                 newNode.setPosition(cc.p(x * (this.node.width / 4), y * (this.node.height / 4))); //根据棋盘和棋子大小计算使每个棋子节点位于指定位置
                 newNode.setContentSize(this.node.width / 6, this.node.height / 6);
                 newNode.opacity = 0;
                 chessList.push(newNode);
                 newNode.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
-                    //为了调用类里面的静态方法，需要将类实例化
-                    var game = new Game();
                     var chessNode = game.selectchess(event, chessList);
                     //显示此棋子节点 节点从1开始 所以需要+1
-                    if (chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame != null) {
-                        chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/clickwhite.png'));
+                    //if (game.gameState == 'white' && chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame != null) {
+                    //   chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/clickwhite.png'));
+                    //}
+                    console.log(chessList[chessNode + 1].opacity);
+                    console.log(game.prepare);
+                    //if(game.lastNode != 0){
+                    //     newNode.getLocationX;
+                    //}
+                    if (chessList[chessNode + 1].opacity != 0) {
+                        if (game.gameState == 'white') {
+                            chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/clickwhite.png'));
+                            game.prepare = 1;
+                            game.lastNode = chessNode + 1;
+                            console.log('white:' + game.gameState + game.prepare);
+                        } else {
+                            chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/clickblack.png'));
+                            game.prepare = 1;
+                            game.lastNode = chessNode + 1;
+                        };
+                    } else {
+                        if (game.prepare == 1) {
+                            if (game.gameState == 'white') {
+                                console.log('prepare:' + game.gameState + game.prepare);
+                                chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/whitechess.png'));
+                                chessList[chessNode + 1].opacity = 255;
+                                chessList[game.lastNode].opacity = 0;
+                                game.prepare = 0;
+                            } else {
+                                chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/blackchess.png'));
+                                chessList[chessNode + 1].opacity = 255;
+                                chessList[game.lastNode].opacity = 0;
+                                game.prepare = 0;
+                            }
+                        }
                     }
+                    //if chess != null{if white white.png prepare =1 else black.png prepare=1}
+                    //else {if prepare =1 }
                 });
             };
         };
         for (var i = 0; i < 5; i++) {
             chessList[i + 1].opacity = 255;
-            //chessList[25-i].opacity = 255;
-            chessList[25 - i].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/whitechess.png'));
             chessList[25 - i].opacity = 255;
+            chessList[25 - i].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/whitechess.png'));
+            //chessList[25 - i].opacity = 255;
         }
     },
 
