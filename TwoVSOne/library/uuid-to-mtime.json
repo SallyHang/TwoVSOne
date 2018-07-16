@@ -40,7 +40,7 @@
     "relativePath": "prefab"
   },
   "0bc21336-8c21-4fe4-94bc-76672e057393": {
-    "asset": 1531211059210,
+    "asset": 1531279493076,
     "meta": 1531208789911,
     "relativePath": "Script"
   },
@@ -70,7 +70,7 @@
     "relativePath": "chess.prefab"
   },
   "82057ad2-1d3e-475f-8c33-742c22e21792": {
-    "asset": 1531211906566,
+    "asset": 1531278839200,
     "meta": 1531208789930,
     "relativePath": "resources"
   },
@@ -310,8 +310,8 @@
     "relativePath": "Script\\NewScript.js"
   },
   "d980d2f7-9cd1-43be-a047-367fe3ee97e0": {
-    "asset": 1531466300577,
-    "meta": 1531466302617,
+    "asset": 1531730774886,
+    "meta": 1531730787522,
     "relativePath": "Script\\chessinit.js"
   }
 }

@@ -2,7 +2,7 @@
 cc._RF.push(module, 'd980dL3nNFDvqBHNn/j7pfg', 'chessinit');
 // Script/chessinit.js
 
-'use strict';
+"use strict";
 
 var Game = cc.Class({
     extends: cc.Component,
@@ -12,13 +12,8 @@ var Game = cc.Class({
             default: null,
             type: cc.Prefab
         },
-        chess: { //棋子节点
-            default: null,
-            type: cc.Node
-        },
-        whitechessPrefab: { //棋子的预制资源
-            default: null,
-            type: cc.Prefab
+        occupied: { //记录当前棋盘中被占用的节点位置
+            default: []
         },
         gameState: { // 游戏顺序
             default: 'white'
@@ -29,6 +24,11 @@ var Game = cc.Class({
         prepare: { // 是否是准备走棋子 0：否 1：是
             default: 0
         }
+    },
+    //构造函数
+    ctor: function ctor() {
+        // 声明实例变量并赋默认值
+        this.occupied = [1, 2, 3, 4, 5, 21, 22, 23, 24, 25];
     },
     //返回点击的棋子节点
     selectchess: function selectchess(event, chessList) {
@@ -65,53 +65,78 @@ var Game = cc.Class({
                 newNode.opacity = 0;
                 chessList.push(newNode);
                 newNode.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
-                    var chessNode = game.selectchess(event, chessList);
                     //显示此棋子节点 节点从1开始 所以需要+1
-                    //if (game.gameState == 'white' && chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame != null) {
-                    //   chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/clickwhite.png'));
-                    //}
-                    console.log(chessList[chessNode + 1].opacity);
-                    console.log(game.prepare);
-                    //if(game.lastNode != 0){
-                    //     newNode.getLocationX;
-                    //}
-                    if (chessList[chessNode + 1].opacity != 0) {
-                        if (game.gameState == 'white') {
-                            chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/clickwhite.png'));
-                            game.prepare = 1;
-                            game.lastNode = chessNode + 1;
-                            console.log('white:' + game.gameState + game.prepare);
-                        } else {
-                            chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/clickblack.png'));
-                            game.prepare = 1;
-                            game.lastNode = chessNode + 1;
-                        };
+                    var chessNode = game.selectchess(event, chessList) + 1;
+                    if (game.occupied.indexOf(chessNode) == -1) {
+                        game.occupied.push(chessNode);
+                    }
+                    console.log(game.occupied);
+                    //点击棋子变为半透明状态
+                    if (chessList[chessNode].opacity != 0) {
+                        chessList[chessNode].opacity = 128;
+                        game.prepare = 1;
+                        game.lastNode = chessNode;
                     } else {
                         if (game.prepare == 1) {
+                            if (game.lastNode != 0) {
+                                //判断不能跨棋子移动
+                                if (chessList[chessNode].position.x == chessList[game.lastNode].position.x) {
+                                    var min = Math.min(chessNode, game.lastNode) + 5;
+                                    var max = Math.max(chessNode, game.lastNode);
+                                    for (var i = min; i < max; i = i + 5) {
+                                        if (game.occupied.indexOf(i) != -1) {
+                                            alert("不能跨越其他棋子！");
+                                            chessList[game.lastNode].opacity = 255;
+                                            return false;
+                                        }
+                                    }
+                                }
+                                if (chessList[chessNode].position.y == chessList[game.lastNode].position.y) {
+                                    var min = Math.min(chessNode, game.lastNode) + 1;
+                                    var max = Math.max(chessNode, game.lastNode);
+                                    for (var i = min; i < max; i++) {
+                                        if (game.occupied.indexOf(i) != -1) {
+                                            alert("不能跨越其他棋子！");
+                                            chessList[game.lastNode].opacity = 255;
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                            //目标棋子节点显示，上一棋子节点透明
                             if (game.gameState == 'white') {
-                                console.log('prepare:' + game.gameState + game.prepare);
-                                chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/whitechess.png'));
-                                chessList[chessNode + 1].opacity = 255;
+                                chessList[chessNode].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/whitechess.png'));
+                                chessList[chessNode].opacity = 255;
                                 chessList[game.lastNode].opacity = 0;
+                                console.log(game.lastNode);
+                                //将上一棋子节点从occupied中删除
+                                for (var k = 0; k < game.occupied.length; k++) {
+                                    if (game.occupied[k] == game.lastNode) {
+                                        game.occupied.splice(k, 1);
+                                    }
+                                }
                                 game.prepare = 0;
                             } else {
-                                chessList[chessNode + 1].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/blackchess.png'));
-                                chessList[chessNode + 1].opacity = 255;
+                                chessList[chessNode].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/blackchess.png'));
+                                chessList[chessNode].opacity = 255;
                                 chessList[game.lastNode].opacity = 0;
+                                for (var k = 0; k < game.occupied.length; k++) {
+                                    if (game.occupied[k] == game.lastNode) {
+                                        game.occupied.splice(k, k + 1);
+                                    }
+                                }
                                 game.prepare = 0;
                             }
                         }
                     }
-                    //if chess != null{if white white.png prepare =1 else black.png prepare=1}
-                    //else {if prepare =1 }
                 });
             };
         };
+        //初始化棋盘
         for (var i = 0; i < 5; i++) {
             chessList[i + 1].opacity = 255;
             chessList[25 - i].opacity = 255;
             chessList[25 - i].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/whitechess.png'));
-            //chessList[25 - i].opacity = 255;
         }
     },
 
