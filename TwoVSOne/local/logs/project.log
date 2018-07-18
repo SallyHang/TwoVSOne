@@ -1,66 +1,84 @@
-2018-07-16T01:00:57.565Z - normal: Load ~/.CocosCreator/settings.json
-2018-07-16T01:00:57.572Z - normal: checking language setting...
-2018-07-16T01:00:57.572Z - normal: Language: zh
-2018-07-16T01:01:02.867Z - success: protocol editor-framework registered
-2018-07-16T01:01:02.868Z - success: protocol app registered
-2018-07-16T01:01:02.868Z - success: protocol theme registered
-2018-07-16T01:01:02.868Z - success: protocol packages registered
-2018-07-16T01:01:02.869Z - success: protocol unpack registerred
-2018-07-16T01:01:02.869Z - success: protocol disable-commonjs registerred
-2018-07-16T01:01:03.065Z - normal: connected!
-2018-07-16T01:01:03.068Z - normal: Check project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne
-2018-07-16T01:01:03.073Z - normal: Initializing Cocos2d
-2018-07-16T01:01:04.968Z - normal: Initializing Asset Database
-2018-07-16T01:01:05.080Z - success: protocol uuid registerred
-2018-07-16T01:01:05.080Z - success: protocol db registerred
-2018-07-16T01:01:05.080Z - success: protocol thumbnail registerred
-2018-07-16T01:01:05.081Z - normal: Loading editor/builtin packages
-2018-07-16T01:01:05.148Z - success: anysdk loaded
-2018-07-16T01:01:05.421Z - success: assets loaded
-2018-07-16T01:01:05.424Z - success: builder loaded
-2018-07-16T01:01:05.429Z - success: cocos-analytics loaded
-2018-07-16T01:01:05.434Z - success: console loaded
-2018-07-16T01:01:05.484Z - success: fb-instant-games loaded
-2018-07-16T01:01:05.489Z - success: hierarchy loaded
-2018-07-16T01:01:05.494Z - success: inspector loaded
-2018-07-16T01:01:05.497Z - success: keystore loaded
-2018-07-16T01:01:05.502Z - success: node-library loaded
-2018-07-16T01:01:05.505Z - success: package-asset loaded
-2018-07-16T01:01:05.509Z - success: preferences loaded
-2018-07-16T01:01:05.512Z - success: project-exporter loaded
-2018-07-16T01:01:05.537Z - success: project-importer loaded
-2018-07-16T01:01:05.540Z - success: project-settings loaded
-2018-07-16T01:01:05.545Z - success: ui-kit loaded
-2018-07-16T01:01:05.562Z - success: ui-grid loaded
-2018-07-16T01:01:05.568Z - success: scene loaded
-2018-07-16T01:01:05.570Z - success: sprite-editor loaded
-2018-07-16T01:01:05.576Z - success: store loaded
-2018-07-16T01:01:05.583Z - success: timeline loaded
-2018-07-16T01:01:05.584Z - normal: Loading builtin packages
-2018-07-16T01:01:05.590Z - success: asset-db-debugger loaded
-2018-07-16T01:01:05.602Z - success: code-editor loaded
-2018-07-16T01:01:05.603Z - success: color-picker loaded
-2018-07-16T01:01:05.623Z - success: package-manager loaded
-2018-07-16T01:01:05.625Z - success: qqplay-adapter loaded
-2018-07-16T01:01:05.640Z - success: sdkbox loaded
-2018-07-16T01:01:05.660Z - success: tester loaded
-2018-07-16T01:01:05.663Z - success: ui-kit-preview-extra loaded
-2018-07-16T01:01:05.672Z - success: ui-kit-preview loaded
-2018-07-16T01:01:05.678Z - success: ui-tree loaded
-2018-07-16T01:01:05.680Z - success: weapp-adapter loaded
-2018-07-16T01:01:08.529Z - normal: Initializing project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne
-2018-07-16T01:01:08.534Z - normal: Loading packages
-2018-07-16T01:01:08.547Z - normal: Watching packages
-2018-07-16T01:01:09.168Z - normal: Run Application
-2018-07-16T01:01:10.695Z - success: preview server running at http://localhost:7456
-2018-07-16T01:01:21.758Z - normal: 1.9.2
-2018-07-16T08:28:12.878Z - error: Default array must be empty, set default value of chessinit.occupied to [], and initialize in 'onLoad' or 'ctor' please. (just like 'this.occupied = [...];')
+2018-07-18T00:44:56.984Z - normal: Load ~/.CocosCreator/settings.json
+2018-07-18T00:44:56.993Z - normal: checking language setting...
+2018-07-18T00:44:56.994Z - normal: Language: zh
+2018-07-18T00:45:04.729Z - success: protocol editor-framework registered
+2018-07-18T00:45:04.729Z - success: protocol app registered
+2018-07-18T00:45:04.729Z - success: protocol theme registered
+2018-07-18T00:45:04.729Z - success: protocol packages registered
+2018-07-18T00:45:04.730Z - success: protocol unpack registerred
+2018-07-18T00:45:04.730Z - success: protocol disable-commonjs registerred
+2018-07-18T00:45:04.875Z - normal: connected!
+2018-07-18T00:45:04.878Z - normal: Check project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne
+2018-07-18T00:45:04.881Z - normal: Initializing Cocos2d
+2018-07-18T00:45:07.173Z - normal: Initializing Asset Database
+2018-07-18T00:45:07.509Z - success: protocol uuid registerred
+2018-07-18T00:45:07.509Z - success: protocol db registerred
+2018-07-18T00:45:07.509Z - success: protocol thumbnail registerred
+2018-07-18T00:45:07.510Z - normal: Loading editor/builtin packages
+2018-07-18T00:45:07.924Z - success: anysdk loaded
+2018-07-18T00:45:08.326Z - success: assets loaded
+2018-07-18T00:45:08.350Z - success: builder loaded
+2018-07-18T00:45:08.354Z - success: cocos-analytics loaded
+2018-07-18T00:45:08.442Z - success: console loaded
+2018-07-18T00:45:08.537Z - success: fb-instant-games loaded
+2018-07-18T00:45:08.543Z - success: hierarchy loaded
+2018-07-18T00:45:08.549Z - success: inspector loaded
+2018-07-18T00:45:08.551Z - success: keystore loaded
+2018-07-18T00:45:08.556Z - success: node-library loaded
+2018-07-18T00:45:08.559Z - success: package-asset loaded
+2018-07-18T00:45:08.562Z - success: preferences loaded
+2018-07-18T00:45:08.565Z - success: project-exporter loaded
+2018-07-18T00:45:08.594Z - success: project-importer loaded
+2018-07-18T00:45:08.598Z - success: project-settings loaded
+2018-07-18T00:45:08.601Z - success: ui-kit loaded
+2018-07-18T00:45:08.620Z - success: ui-grid loaded
+2018-07-18T00:45:08.626Z - success: scene loaded
+2018-07-18T00:45:08.628Z - success: sprite-editor loaded
+2018-07-18T00:45:08.643Z - success: store loaded
+2018-07-18T00:45:08.652Z - success: timeline loaded
+2018-07-18T00:45:08.652Z - normal: Loading builtin packages
+2018-07-18T00:45:08.657Z - success: asset-db-debugger loaded
+2018-07-18T00:45:08.671Z - success: code-editor loaded
+2018-07-18T00:45:08.673Z - success: color-picker loaded
+2018-07-18T00:45:08.676Z - success: package-manager loaded
+2018-07-18T00:45:08.679Z - success: qqplay-adapter loaded
+2018-07-18T00:45:08.787Z - success: sdkbox loaded
+2018-07-18T00:45:08.832Z - success: tester loaded
+2018-07-18T00:45:08.834Z - success: ui-kit-preview-extra loaded
+2018-07-18T00:45:08.837Z - success: ui-kit-preview loaded
+2018-07-18T00:45:08.840Z - success: ui-tree loaded
+2018-07-18T00:45:08.841Z - success: weapp-adapter loaded
+2018-07-18T00:45:13.248Z - normal: Initializing project D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne
+2018-07-18T00:45:13.252Z - normal: Loading packages
+2018-07-18T00:45:13.260Z - normal: Watching packages
+2018-07-18T00:45:13.771Z - normal: Run Application
+2018-07-18T00:45:16.528Z - success: preview server running at http://localhost:7456
+2018-07-18T00:45:33.141Z - normal: 1.9.2
+2018-07-18T08:23:47.366Z - failed: [db-task][sync-changes] Failed to import asset D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne\assets\Script\chessinit.js, message: Compile error: SyntaxError: D:/ProgramFiles/CocosCreateEngine/code/TwoVSOne/TwoVSOne/TwoVSOne/assets/Script/chessinit.js: Unexpected token (25:24)
+  23 |         },
+  24 |         direction: {//X轴 Y轴
+> 25 |             default: [][]
+     |                         ^
+  26 |         },
+  27 |     },
+  28 |     //构造函数
+    at Parser.pp$5.raise (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp$3.parseExprAtom (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3750:12)
+    at Parser.pp$3.parseExprSubscripts (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)
+    at Parser.pp$3.parseExpression (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3306:19)
+    at Parser.pp$3.parseSubscripts (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3523:30)
+2018-07-18T08:24:47.715Z - error: Default array must be empty, set default value of chessinit.direction to [], and initialize in 'onLoad' or 'ctor' please. (just like 'this.direction = [...];')
     at Object.errorID (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\engine\CCDebugger.js:343:18)
     at defineProp (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\engine\cocos2d\core\platform\CCClass.js:118:28)
     at declareProperties (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\engine\cocos2d\core\platform\CCClass.js:812:17)
     at Object.CCClass [as Class] (D:\ProgramFiles\CocosCreateEngine\CocosCreator\resources\engine\cocos2d\core\platform\CCClass.js:947:9)
     at __define (D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne\temp\quick-scripts\assets\Script\chessinit.js:7:15)
-    at D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne\temp\quick-scripts\assets\Script\chessinit.js:149:13
-    at Object.<anonymous> (D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne\temp\quick-scripts\assets\Script\chessinit.js:156:11)
-    at Object.<anonymous> (D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne\temp\quick-scripts\assets\Script\chessinit.js:159:3)
+    at D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne\temp\quick-scripts\assets\Script\chessinit.js:205:13
+    at Object.<anonymous> (D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne\temp\quick-scripts\assets\Script\chessinit.js:212:11)
+    at Object.<anonymous> (D:\ProgramFiles\CocosCreateEngine\code\TwoVSOne\TwoVSOne\TwoVSOne\temp\quick-scripts\assets\Script\chessinit.js:215:3)
     at Module._compile (module.js:571:32)

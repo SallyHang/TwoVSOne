@@ -305,13 +305,13 @@
     "relativePath": "resources\\clickwhite.png"
   },
   "5f4008d6-6a38-4890-b058-7fd5a54c816b": {
-    "asset": 1531279492984,
-    "meta": 1531279493077,
+    "asset": 1531894104842,
+    "meta": 1531902227403,
     "relativePath": "Script\\NewScript.js"
   },
   "d980d2f7-9cd1-43be-a047-367fe3ee97e0": {
-    "asset": 1531730774886,
-    "meta": 1531730787522,
+    "asset": 1531903306186,
+    "meta": 1531903311831,
     "relativePath": "Script\\chessinit.js"
   }
 }

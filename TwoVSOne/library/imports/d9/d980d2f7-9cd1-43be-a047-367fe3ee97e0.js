@@ -15,6 +15,9 @@ var Game = cc.Class({
         occupied: { //记录当前棋盘中被占用的节点位置
             default: []
         },
+        occupiedcolor: { //记录当前棋盘中被占用的节点颜色 0：无子 1：白色 2：黑色
+            default: []
+        },
         gameState: { // 游戏顺序
             default: 'white'
         },
@@ -23,12 +26,21 @@ var Game = cc.Class({
         },
         prepare: { // 是否是准备走棋子 0：否 1：是
             default: 0
+        },
+        directionX: { //X轴
+            default: []
+        },
+        directionY: { //Y轴
+            default: []
         }
     },
     //构造函数
     ctor: function ctor() {
         // 声明实例变量并赋默认值
         this.occupied = [1, 2, 3, 4, 5, 21, 22, 23, 24, 25];
+        this.occupiedcolor = [0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1];
+        this.directionX = [1, -1];
+        this.directionY = [5, -5];
     },
     //返回点击的棋子节点
     selectchess: function selectchess(event, chessList) {
@@ -70,7 +82,7 @@ var Game = cc.Class({
                     if (game.occupied.indexOf(chessNode) == -1) {
                         game.occupied.push(chessNode);
                     }
-                    console.log(game.occupied);
+                    //console.log(game.occupied);
                     //点击棋子变为半透明状态
                     if (chessList[chessNode].opacity != 0) {
                         chessList[chessNode].opacity = 128;
@@ -102,13 +114,17 @@ var Game = cc.Class({
                                         }
                                     }
                                 }
+                                if (chessList[chessNode].position.x != chessList[game.lastNode].position.x && chessList[chessNode].position.y != chessList[game.lastNode].position.y) {
+                                    alert("不能沿斜线移动棋子！");
+                                    return false;
+                                }
                             }
                             //目标棋子节点显示，上一棋子节点透明
                             if (game.gameState == 'white') {
                                 chessList[chessNode].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/whitechess.png'));
                                 chessList[chessNode].opacity = 255;
                                 chessList[game.lastNode].opacity = 0;
-                                console.log(game.lastNode);
+                                //console.log(game.lastNode);
                                 //将上一棋子节点从occupied中删除
                                 for (var k = 0; k < game.occupied.length; k++) {
                                     if (game.occupied[k] == game.lastNode) {
@@ -116,6 +132,44 @@ var Game = cc.Class({
                                     }
                                 }
                                 game.prepare = 0;
+                                //判断胜负
+                                var count = 1;
+                                var flag = true;
+                                var temp = chessNode;
+                                var s = parseInt(chessNode / 5);
+                                var r = chessNode % 5 == 0 ? 5 : chessNode % 5;
+                                console.log(game.occupied);
+                                console.log(temp + ' ' + s + ' ' + r);
+                                //X轴 j=0 X右侧；j=1 X左侧
+                                for (var j = 0; j < 2; j++) {
+                                    flag = true;
+                                    while (flag && temp > s * 5 && temp < (s + 1) * 5) {
+                                        temp = temp + game.directionX[j];
+                                        console.log(game.occupied.indexOf(temp));
+                                        if (game.occupied.indexOf(temp) != -1) {
+                                            count++;
+                                            console.log('countX:' + count);
+                                        } else {
+                                            flag = false;
+                                        }
+                                    }
+                                    temp = chessNode;
+                                }
+                                count = 1;
+                                //y轴 j=0 y右侧；j=1 y左侧
+                                for (var j = 0; j < 2; j++) {
+                                    flag = true;
+                                    while (flag && temp >= r && temp <= 20 + r) {
+                                        temp = temp + game.directionY[j];
+                                        if (game.occupied.indexOf(temp) != -1) {
+                                            count++;
+                                            console.log('countY:' + count);
+                                        } else {
+                                            flag = false;
+                                        }
+                                    }
+                                    temp = chessNode;
+                                }
                             } else {
                                 chessList[chessNode].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/blackchess.png'));
                                 chessList[chessNode].opacity = 255;
