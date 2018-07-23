@@ -124,7 +124,10 @@ var Game = cc.Class({
                                 chessList[chessNode].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/whitechess.png'));
                                 chessList[chessNode].opacity = 255;
                                 chessList[game.lastNode].opacity = 0;
+                                game.occupiedcolor[chessNode] = 1;
                                 //console.log(game.lastNode);
+                                //将颜色列表中上一棋子颜色改为0
+                                game.occupiedcolor[game.lastNode] = 0;
                                 //将上一棋子节点从occupied中删除
                                 for (var k = 0; k < game.occupied.length; k++) {
                                     if (game.occupied[k] == game.lastNode) {
@@ -132,43 +135,106 @@ var Game = cc.Class({
                                     }
                                 }
                                 game.prepare = 0;
+                                console.log(game.occupiedcolor);
                                 //判断胜负
                                 var count = 1;
                                 var flag = true;
                                 var temp = chessNode;
-                                var s = parseInt(chessNode / 5);
+                                var s = parseInt((chessNode - 1) / 5);
                                 var r = chessNode % 5 == 0 ? 5 : chessNode % 5;
-                                console.log(game.occupied);
-                                console.log(temp + ' ' + s + ' ' + r);
+                                //console.log(game.occupied);
+                                //console.log(temp + ' ' + s + ' ' + r);
                                 //X轴 j=0 X右侧；j=1 X左侧
                                 for (var j = 0; j < 2; j++) {
-                                    flag = true;
-                                    while (flag && temp > s * 5 && temp < (s + 1) * 5) {
+                                    //flag = true;
+                                    while (temp > s * 5 && temp < (s + 1) * 5) {
                                         temp = temp + game.directionX[j];
-                                        console.log(game.occupied.indexOf(temp));
                                         if (game.occupied.indexOf(temp) != -1) {
                                             count++;
-                                            console.log('countX:' + count);
+                                            //console.log('countX:' + count);
                                         } else {
-                                            flag = false;
-                                        }
+                                                //flag = false;
+                                            }
                                     }
                                     temp = chessNode;
+                                }
+                                if (count == 3) {
+                                    for (var j = 0; j < 2; j++) {
+                                        //flag = true;
+                                        console.log('jadgeover');
+                                        while (temp > s * 5 && temp < (s + 1) * 5) {
+                                            console.log('1' + temp);
+                                            temp = temp + game.directionX[j];
+                                            if (game.occupiedcolor[chessNode] == game.occupiedcolor[temp]) {
+                                                console.log('2' + temp);
+                                                temp = temp + game.directionX[j];
+                                                if (game.occupiedcolor[temp - 1] != game.occupiedcolor[temp]) {
+                                                    console.log('3' + temp);
+                                                    chessList[temp].opacity = 0;
+                                                }
+                                            } else {
+                                                //flag = false;
+                                            }
+                                        }
+                                        temp = chessNode;
+                                    }
                                 }
                                 count = 1;
                                 //y轴 j=0 y右侧；j=1 y左侧
                                 for (var j = 0; j < 2; j++) {
-                                    flag = true;
-                                    while (flag && temp >= r && temp <= 20 + r) {
+                                    //flag = true;
+                                    while (temp >= r && temp <= 20 + r) {
                                         temp = temp + game.directionY[j];
                                         if (game.occupied.indexOf(temp) != -1) {
                                             count++;
-                                            console.log('countY:' + count);
+                                            //console.log('countY:' + count);
                                         } else {
-                                            flag = false;
-                                        }
+                                                //flag = false;
+                                            }
                                     }
                                     temp = chessNode;
+                                }
+                                console.log('count:' + count);
+                                if (count == 3) {
+                                    var theThree = [];
+                                    count = 1;
+                                    temp = chessNode;
+                                    flag = true;
+                                    theThree.push(temp);
+                                    for (var j = 0; j < 2; j++) {
+                                        flag = true;
+                                        console.log('temp:' + temp);
+                                        while (flag && temp >= r && temp <= 20 + r) {
+                                            temp = temp + game.directionY[j];
+                                            console.log('tempo:' + game.occupied.indexOf(temp));
+                                            if (game.occupied.indexOf(temp) != -1) {
+                                                theThree.push(temp);
+                                                count++;
+                                                console.log('countY:' + count);
+                                            } else {
+                                                flag = false;
+                                            }
+                                        }
+                                        temp = chessNode;
+                                    }
+                                    console.log('count3:' + count);
+                                    if (count == 3) {
+                                        theThree = theThree.sort(function (a, b) {
+                                            return a - b;
+                                        });
+                                        console.log('theThree:' + theThree);
+                                        console.log(game.occupiedcolor[theThree[0]]);
+                                        if (game.occupiedcolor[theThree[0]] == game.occupiedcolor[theThree[1]]) {
+                                            console.log(game.occupiedcolor[theThree[0]]);
+                                            if (game.occupiedcolor[theThree[1]] != game.occupiedcolor[theThree[2]]) {
+                                                chessList[theThree[2]].opacity = 0;
+                                            }
+                                        } else {
+                                            if (game.occupiedcolor[theThree[1]] == game.occupiedcolor[theThree[2]]) {
+                                                chessList[theThree[0]].opacity = 0;
+                                            }
+                                        }
+                                    }
                                 }
                             } else {
                                 chessList[chessNode].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/blackchess.png'));
