@@ -2,7 +2,7 @@
 cc._RF.push(module, 'd980dL3nNFDvqBHNn/j7pfg', 'chessinit');
 // Script/chessinit.js
 
-"use strict";
+'use strict';
 
 var Game = cc.Class({
     extends: cc.Component,
@@ -63,6 +63,133 @@ var Game = cc.Class({
 
         return minpos;
     },
+
+    //重新排序连续的三个棋子并判断哪个被吃掉 在eatchess()中被调用
+    sortchesss: function sortchesss(game, chessList, theThree) {
+        theThree = theThree.sort(function (a, b) {
+            return a - b;
+        }); //实现数组中按照数字大小排序
+        console.log('theThreeX:' + theThree);
+        if (game.occupiedcolor[theThree[0]] == game.occupiedcolor[theThree[1]]) {
+            if (game.occupiedcolor[theThree[1]] != game.occupiedcolor[theThree[2]]) {
+                chessList[theThree[2]].opacity = 0;
+                game.occupiedcolor[theThree[2]] = 0;
+                for (var k = 0; k < game.occupied.length; k++) {
+                    if (game.occupied[k] == theThree[2]) {
+                        game.occupied.splice(k, 1);
+                    }
+                }
+            }
+        } else {
+            if (game.occupiedcolor[theThree[1]] == game.occupiedcolor[theThree[2]]) {
+                chessList[theThree[0]].opacity = 0;
+                game.occupiedcolor[theThree[0]] = 0;
+                for (var k = 0; k < game.occupied.length; k++) {
+                    if (game.occupied[k] == theThree[0]) {
+                        game.occupied.splice(k, 1);
+                    }
+                }
+            }
+        }
+    },
+
+    //判断是否吃子 在主程序中调用
+    eatchess: function eatchess(chessNode, game, chessList) {
+        var count = 1;
+        var flag = true;
+        var temp = chessNode;
+        var s = parseInt((chessNode - 1) / 5); //取除数用于判断x轴棋子所在范围
+        var r = chessNode % 5 == 0 ? 5 : chessNode % 5; //取余数用于判断y轴棋子所在范围
+        console.log(game.occupied);
+        console.log(temp + ' ' + s + ' ' + r);
+        //X轴 j=0 X右侧；j=1 X左侧
+        for (var j = 0; j < 2; j++) {
+            //flag = true;
+            temp = temp + game.directionX[j];
+            while (temp > s * 5 && temp <= (s + 1) * 5) {
+                console.log('temp:' + temp);
+                if (game.occupied.indexOf(temp) != -1) {
+                    count++;
+                    temp = temp + game.directionX[j];
+                    console.log('countX:' + count);
+                } else {
+                    temp = temp + game.directionX[j];
+                }
+            }
+            temp = chessNode;
+        }
+        console.log('count:' + count);
+        if (count == 3) {
+            //判断这三个棋子是否连续
+            var theThree = [];
+            count = 1;
+            temp = chessNode;
+            flag = true;
+            theThree.push(temp);
+            for (var j = 0; j < 2; j++) {
+                temp = temp + game.directionX[j];
+                flag = true;
+                while (flag && temp > s * 5 && temp <= (s + 1) * 5) {
+
+                    if (game.occupied.indexOf(temp) != -1) {
+                        theThree.push(temp);
+                        count++;
+                        temp = temp + game.directionX[j];
+                    } else {
+                        flag = false;
+                    }
+                }
+                temp = chessNode;
+            }
+            console.log('count3y:' + count);
+            if (count == 3) {
+                //重新排列这三个连续的棋子，将颜色不同的那个吃掉
+                game.sortchesss(game, chessList, theThree);
+            }
+        }
+        count = 1;
+        temp = chessNode;
+        //y轴 j=0 y右侧；j=1 y左侧
+        for (var j = 0; j < 2; j++) {
+            //flag = true;
+            while (temp >= r && temp <= 20 + r) {
+                temp = temp + game.directionY[j];
+                if (game.occupied.indexOf(temp) != -1) {
+                    count++;
+                    //console.log('countY:' + count);
+                } else {
+                        //flag = false;
+                    }
+            }
+            temp = chessNode;
+        }
+        console.log('county:' + count);
+        if (count == 3) {
+            //判断这三个棋子是否连续
+            var theThree = [];
+            count = 1;
+            temp = chessNode;
+            flag = true;
+            theThree.push(temp);
+            for (var j = 0; j < 2; j++) {
+                flag = true;
+                while (flag && temp >= r && temp <= 20 + r) {
+                    temp = temp + game.directionY[j];
+                    if (game.occupied.indexOf(temp) != -1) {
+                        theThree.push(temp);
+                        count++;
+                    } else {
+                        flag = false;
+                    }
+                }
+                temp = chessNode;
+            }
+            if (count == 3) {
+                //重新排列这三个连续的棋子，将颜色不同的那个吃掉
+                game.sortchesss(game, chessList, theThree);
+            }
+        }
+    },
     chessinit: function chessinit() {
         var self = this;
         var chessList = [cc.Node]; //棋子从下标1开始           
@@ -77,6 +204,7 @@ var Game = cc.Class({
                 newNode.opacity = 0;
                 chessList.push(newNode);
                 newNode.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
+                    console.log(game.gameState);
                     //显示此棋子节点 节点从1开始 所以需要+1
                     var chessNode = game.selectchess(event, chessList) + 1;
                     if (game.occupied.indexOf(chessNode) == -1) {
@@ -136,116 +264,24 @@ var Game = cc.Class({
                                 }
                                 game.prepare = 0;
                                 console.log(game.occupiedcolor);
-                                //判断胜负
-                                var count = 1;
-                                var flag = true;
-                                var temp = chessNode;
-                                var s = parseInt((chessNode - 1) / 5);
-                                var r = chessNode % 5 == 0 ? 5 : chessNode % 5;
-                                //console.log(game.occupied);
-                                //console.log(temp + ' ' + s + ' ' + r);
-                                //X轴 j=0 X右侧；j=1 X左侧
-                                for (var j = 0; j < 2; j++) {
-                                    //flag = true;
-                                    while (temp > s * 5 && temp < (s + 1) * 5) {
-                                        temp = temp + game.directionX[j];
-                                        if (game.occupied.indexOf(temp) != -1) {
-                                            count++;
-                                            //console.log('countX:' + count);
-                                        } else {
-                                                //flag = false;
-                                            }
-                                    }
-                                    temp = chessNode;
-                                }
-                                if (count == 3) {
-                                    for (var j = 0; j < 2; j++) {
-                                        //flag = true;
-                                        console.log('jadgeover');
-                                        while (temp > s * 5 && temp < (s + 1) * 5) {
-                                            console.log('1' + temp);
-                                            temp = temp + game.directionX[j];
-                                            if (game.occupiedcolor[chessNode] == game.occupiedcolor[temp]) {
-                                                console.log('2' + temp);
-                                                temp = temp + game.directionX[j];
-                                                if (game.occupiedcolor[temp - 1] != game.occupiedcolor[temp]) {
-                                                    console.log('3' + temp);
-                                                    chessList[temp].opacity = 0;
-                                                }
-                                            } else {
-                                                //flag = false;
-                                            }
-                                        }
-                                        temp = chessNode;
-                                    }
-                                }
-                                count = 1;
-                                //y轴 j=0 y右侧；j=1 y左侧
-                                for (var j = 0; j < 2; j++) {
-                                    //flag = true;
-                                    while (temp >= r && temp <= 20 + r) {
-                                        temp = temp + game.directionY[j];
-                                        if (game.occupied.indexOf(temp) != -1) {
-                                            count++;
-                                            //console.log('countY:' + count);
-                                        } else {
-                                                //flag = false;
-                                            }
-                                    }
-                                    temp = chessNode;
-                                }
-                                console.log('count:' + count);
-                                if (count == 3) {
-                                    var theThree = [];
-                                    count = 1;
-                                    temp = chessNode;
-                                    flag = true;
-                                    theThree.push(temp);
-                                    for (var j = 0; j < 2; j++) {
-                                        flag = true;
-                                        console.log('temp:' + temp);
-                                        while (flag && temp >= r && temp <= 20 + r) {
-                                            temp = temp + game.directionY[j];
-                                            console.log('tempo:' + game.occupied.indexOf(temp));
-                                            if (game.occupied.indexOf(temp) != -1) {
-                                                theThree.push(temp);
-                                                count++;
-                                                console.log('countY:' + count);
-                                            } else {
-                                                flag = false;
-                                            }
-                                        }
-                                        temp = chessNode;
-                                    }
-                                    console.log('count3:' + count);
-                                    if (count == 3) {
-                                        theThree = theThree.sort(function (a, b) {
-                                            return a - b;
-                                        });
-                                        console.log('theThree:' + theThree);
-                                        console.log(game.occupiedcolor[theThree[0]]);
-                                        if (game.occupiedcolor[theThree[0]] == game.occupiedcolor[theThree[1]]) {
-                                            console.log(game.occupiedcolor[theThree[0]]);
-                                            if (game.occupiedcolor[theThree[1]] != game.occupiedcolor[theThree[2]]) {
-                                                chessList[theThree[2]].opacity = 0;
-                                            }
-                                        } else {
-                                            if (game.occupiedcolor[theThree[1]] == game.occupiedcolor[theThree[2]]) {
-                                                chessList[theThree[0]].opacity = 0;
-                                            }
-                                        }
-                                    }
-                                }
+                                //判断吃子
+                                game.eatchess(chessNode, game, chessList);
+                                game.gameState = 'black';
                             } else {
                                 chessList[chessNode].getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/blackchess.png'));
                                 chessList[chessNode].opacity = 255;
                                 chessList[game.lastNode].opacity = 0;
+                                game.occupiedcolor[chessNode] = 2;
+                                game.occupiedcolor[game.lastNode] = 0;
                                 for (var k = 0; k < game.occupied.length; k++) {
                                     if (game.occupied[k] == game.lastNode) {
-                                        game.occupied.splice(k, k + 1);
+                                        game.occupied.splice(k, 1);
                                     }
                                 }
                                 game.prepare = 0;
+                                //判断吃子
+                                game.eatchess(chessNode, game, chessList);
+                                game.gameState = 'white';
                             }
                         }
                     }
